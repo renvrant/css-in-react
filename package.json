@@ -6,7 +6,7 @@
   "scripts": {
     "test": "npm test",
     "start": "mdx-deck deck.js",
-    "build": "mdx-deck build deck.js",
+    "build": "mdx-deck build deck.js --no-html",
     "now-build": "npm run build"
   },
   "author": "",
