@@ -1,7 +1,11 @@
 {
   "version": 2,
   "public": true,
-  "name": "react-css-mdx",
+  "name": "css-in-react",
+  "alias": ["css-in-react"],
+  "github": {
+    "autoJobCancelation": true
+  },
   "builds": [
     {
       "src": "package.json",
