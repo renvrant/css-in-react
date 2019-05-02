@@ -1,0 +1,73 @@
+import { Notes, Appear } from '@mdx-deck/components'
+import { Split } from '@mdx-deck/layouts'
+
+import CodeSandbox from './components/codesandbox';
+
+# <span style={{color: 'orchid'}}>BEM</span>
+
+---
+
+# What is it?
+<ul>
+<Appear>
+    <li>Regular CSS, with special naming conventions for clarity</li>
+    <li>Stands for "Block Element Modifier"</li>
+    <li>Component-oriented thinking for CSS</li>
+</Appear>
+</ul>
+
+<Notes>
+- Became popular in the early days of atomic design thinking, before component-based architecture on the front-end really took off
+- Early example of component thinking in CSS
+</Notes>
+
+---
+
+.<span style={{color: 'mediumaquamarine'}}>block</span><span style={{color: 'orchid'}}>__element</span><span style={{color: 'tomato'}}>--modifier</span>
+
+
+<Notes>
+- Always use classes
+- Block level acts as a namespace for all styles
+- Elements are children of the block
+- Modifiers usually represent different states the block or elements can be in
+</Notes>
+
+---
+
+<CodeSandbox src={`https://codesandbox.io/s/j7rn32kw2v?autoresize=1&codemirror=1&fontsize=14&module=%2Fsrc%2Fcomponents%2FCard.component.js`}/>
+
+---
+
+<Split style={{alignItems: 'flex-start'}}>
+<div style={{fontSize: '.75em', padding: '0 2rem'}}>
+    <h2 style={{color: 'mediumaquamarine'}}>Pros</h2>
+    <ul>
+        <li>Usable anywhere</li>
+        <li>Avoids conflicts</li>
+        <li>Adds clarity</li>
+    </ul>
+</div>
+<div style={{fontSize: '.75em', padding: '0 2rem'}}>
+    <h2 style={{color: 'tomato'}}>Cons</h2>
+    <ul>
+        <li>Must be enforced</li>
+        <li>Long class names</li>
+        <li>Older approach</li>
+    </ul>
+</div>
+</Split>
+
+<Notes>
+- Just CSS, so usable across systems
+- Specificty and naming conflicts
+- Lets you change stuff with more confidence
+- Linters are available
+</Notes>
+
+---
+
+# Best suited for
+- Medium to Large scale projects
+- Framework-agnostic projects
+- Teams who want strong naming conventions

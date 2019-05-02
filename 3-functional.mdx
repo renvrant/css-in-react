@@ -1,0 +1,66 @@
+import { Notes, Appear } from '@mdx-deck/components'
+import { Split } from '@mdx-deck/layouts'
+
+import CodeSandbox from './components/codesandbox';
+
+# <span style={{color: 'orchid'}}>Functional CSS</span>
+
+---
+
+# What is it?
+<ul>
+<Appear>
+    <li>Regular CSS classes</li>
+    <li>Each class styles one property</li>
+    <li>Compose classes to create styles</li>
+</Appear>
+</ul>
+
+---
+
+<CodeSandbox src={`https://codesandbox.io/s/30zl003jnq?autoresize=1&codemirror=1&fontsize=14&module=%2Fsrc%2Fcomponents%2FCard.component.js`}/>
+
+---
+
+<Split style={{alignItems: 'flex-start'}}>
+<div style={{fontSize: '.75em', padding: '0 2rem'}}>
+    <h2 style={{color: 'mediumaquamarine'}}>Pros</h2>
+    <ul>
+        <li>Usable anywhere</li>
+        <li>Low-level consistency</li>
+        <li>Easy to use</li>
+        <li>Highly predictable</li>
+    </ul>
+</div>
+<div style={{fontSize: '.75em', padding: '0 2rem'}}>
+    <h2 style={{color: 'tomato'}}>Cons</h2>
+    <ul>
+        <li>Uglifies HTML</li>
+        <li>Specificity issues</li>
+        <li>Need components for consistency</li>
+        <li>Can't do complex CSS</li>
+    </ul>
+</div>
+</Split>
+
+<Notes>
+- It's just CSS so again it's cross-platform compatible
+- You enforce your low-level rules of your system
+- Highly predictable -> you don't spend time debugging conflicting CSS styles, what you add to your component is what you get.
+- You can run into specificity issues trying to create style APIs for your components
+- You should always use this with STRONG componentization or you lose consistency; developers will make judgement calls themselves between p4 or p3 in different places
+</Notes>
+
+---
+
+# Best suited for
+- Any sized project
+- Projects with consistent low-level design
+- Teams who will make smaller components
+- Fast prototyping
+
+---
+
+# Functional CSS Libraries
+- Tailwind
+- Tachyons

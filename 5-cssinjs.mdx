@@ -1,0 +1,70 @@
+import { Notes, Appear } from '@mdx-deck/components'
+import { Split } from '@mdx-deck/layouts'
+
+import CodeSandbox from './components/codesandbox';
+
+# <span style={{color: 'orchid'}}>CSS-in-JS</span>
+
+---
+
+# What is it?
+<ul>
+<Appear>
+    <li>CSS written in JavaScript template literals</li>
+    <li>Applied to an element and used as a React component</li>
+    <li>Written in the same file as your JS component</li>
+</Appear>
+</ul>
+
+<Notes>
+- Became popular in the early days of atomic design thinking, before component-based architecture on the front-end really took off
+- Early example of component thinking in CSS
+- Supports features like media queries and animation as well
+</Notes>
+
+
+---
+
+# CSS in JS libraries
+
+- styled-components
+- emotion
+- radium
+- aphrodite
+
+---
+
+<CodeSandbox src={`https://codesandbox.io/s/2xzxvmz01n?autoresize=1&codemirror=1&fontsize=14&module=%2Fsrc%2Fcomponents%2FCard.component.js`}/>
+
+---
+
+<Split style={{alignItems: 'flex-start'}}>
+<div style={{fontSize: '.75em', padding: '0 2rem'}}>
+    <h2 style={{color: 'mediumaquamarine'}}>Pros</h2>
+    <ul>
+        <li>Everything in one place</li>
+        <li>Scoped and anonymous</li>
+        <li>JS powered</li>
+    </ul>
+</div>
+<div style={{fontSize: '.75em', padding: '0 2rem'}}>
+    <h2 style={{color: 'tomato'}}>Cons</h2>
+    <ul>
+        <li>Bigger JS files</li>
+        <li>Least portable</li>
+        <li>Some people hate it</li>
+    </ul>
+</div>
+</Split>
+
+<Notes>
+- Some people hate this violently
+- Slight performance hits
+</Notes>
+
+---
+
+# Best suited for
+- Any size app
+- Design systems and complex applications
+- Teams comfortable with JS

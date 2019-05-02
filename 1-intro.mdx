@@ -1,0 +1,69 @@
+import { Notes, Appear, Image } from '@mdx-deck/components'
+
+import CodeSandbox from './components/codesandbox';
+
+# <span style={{color: 'orchid'}}>CSS in React</span>
+Renee Blackburn
+
+<Notes>Intro to me, intro to topic
+- 4 Techniques
+- All of them come from the same point
+</Notes>
+
+---
+
+# CSS <span style={{color: 'red'}}>Pain</span>
+
+<ul>
+<Appear>
+    <li>Consistency</li>
+    <li>Performance</li>
+    <li>Maintainability</li>
+</Appear>
+</ul>
+
+<Notes>
+Techniques are often derived from pain, they become the problems we need to solve
+- Visual consistency: Making sure things look the same everywhere
+- Performance: Keeping load times fast and snappy
+- Maintainability: How we grow and change our CSS over time
+
+Maintainability has huge effects on the other two
+</Notes>
+
+---
+
+# Maintainability Problems
+
+<ul>
+<Appear>
+    <li>Styles are easy to add, hard to remove</li>
+    <li>Global scope is flexible, but enforces nothing</li>
+    <li>Specificity overrides are easy to add, hard to remove</li>
+</Appear>
+</ul>
+
+<Notes>
+- Hard to remove CSS because without visual regression testing it's hard to tell what's still there
+- This is compounded by conditional styles; automated checkers can tell you what isn't used but not what will never BE used
+- CSS is globally applied, which compounds the above problem; a change anywhere can break something anywhere else
+- You wind up relying on good naming more than you ought to
+</Notes>
+
+---
+
+# <span style={{color: 'aquamarine'}}>Solutions</span>
+
+<ul>
+    <li>CSS Only</li>
+    <li>CSS + <span style={{color: 'khaki'}}>JavaScript</span></li>
+</ul>
+
+---
+
+<CodeSandbox src={`https://codesandbox.io/s/k9m0y3y7z5?autoresize=1&codemirror=1&fontsize=14&module=%2Fsrc%2Fcomponents%2FCard.component.js`}/>
+
+---
+
+# CSS Only
+

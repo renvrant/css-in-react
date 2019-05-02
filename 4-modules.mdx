@@ -1,0 +1,82 @@
+import { Notes, Appear } from '@mdx-deck/components'
+import { Split } from '@mdx-deck/layouts'
+
+import CodeSandbox from './components/codesandbox';
+
+# <span style={{color: 'khaki'}}>CSS + JavaScript</span>
+
+---
+
+# <span style={{color: 'orchid'}}>CSS Modules</span>
+
+---
+
+# What is it?
+<ul>
+<Appear>
+    <li>CSS run through JS</li>
+    <li>Adds local scoping to CSS</li>
+    <li>Allows you to compose classes into other classes</li>
+</Appear>
+</ul>
+
+<Notes>
+- Requires webpack or a build step to process the CSS
+- Scopes all CSS you write locally to where it was imported
+- Supported by create react apps 2+ by default
+</Notes>
+
+---
+
+### What you wrote in styles.css
+
+.<span style={{color: 'orchid'}}>title</span>
+
+---
+
+### What you get when you build
+
+.<span style={{color: 'mediumaquamarine'}}>_styles__</span><span style={{color: 'orchid'}}>title</span><span style={{color: 'tomato'}}>_309571057</span>
+
+<Notes>
+- You'll note it's almost like an automatic BEM
+- Classes that aren't used get dropped
+</Notes>
+
+---
+
+<CodeSandbox src={`https://codesandbox.io/s/v6jz60m6ny?autoresize=1&codemirror=1&fontsize=14&module=%2Fsrc%2Fcomponents%2FCard.component.js`}/>
+
+---
+
+<Split style={{alignItems: 'flex-start'}}>
+<div style={{fontSize: '.75em', padding: '0 2rem'}}>
+    <h2 style={{color: 'mediumaquamarine'}}>Pros</h2>
+    <ul>
+        <li>CSS without restriction</li>
+        <li>Local scope</li>
+        <li>Composable classes</li>
+    </ul>
+</div>
+<div style={{fontSize: '.75em', padding: '0 2rem'}}>
+    <h2 style={{color: 'tomato'}}>Cons</h2>
+    <ul>
+        <li>Requires build step</li>
+        <li>Needs architectural support</li>
+    </ul>
+</div>
+</Split>
+
+<Notes>
+- Just CSS, so write however you want
+- Local scope!! Don't think about names or conflicts anymore
+- Dependencies are clear and classes are composable from within existing files and external files
+-
+</Notes>
+
+---
+
+# Best suited for
+- Any size project
+- Teams who want all CSS tools without worrying about naming
+- Teams who don't mind managing global-local relationships
